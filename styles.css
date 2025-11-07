@@ -1,0 +1,306 @@
+/* 传统学术主页样式 */
+
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+/* 页面头部 */
+.header {
+    border-bottom: 2px solid #333;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.profile-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 160px;
+    height: 200px;
+    border: 2px solid #333;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.name-english {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.position {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.contact-info a:hover {
+    color: #666;
+}
+
+/* 各个部分通用样式 */
+section {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+section h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 研究简介部分 */
+.about p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* 教育背景部分 */
+.education-item {
+    margin-bottom: 12px;
+}
+
+.education-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.education-item strong {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+/* 工作经历部分 */
+.experience-item {
+    margin-bottom: 12px;
+}
+
+.experience-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.experience-item strong {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+/* 研究兴趣部分 */
+.research ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.research li {
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.research li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.research strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* 论文发表部分 */
+.publication {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.publication:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.publication h3 {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.publication .authors {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.publication .authors strong {
+    color: #333;
+    font-weight: bold;
+}
+
+.publication .venue {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.publication .venue em {
+    font-style: italic;
+}
+
+.publication .citations {
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .profile-image {
+        align-self: center;
+    }
+    
+    .profile-image img {
+        width: 140px;
+        height: 175px;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .publication h3 {
+        font-size: 1rem;
+    }
+    
+    .contact-info {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image img {
+        width: 120px;
+        height: 150px;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.6rem;
+    }
+    
+    section h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    body {
+        padding: 0;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .container {
+        max-width: none;
+    }
+    
+    section {
+        break-inside: avoid;
+        margin-bottom: 20pt;
+    }
+    
+    .profile-section {
+        break-inside: avoid;
+    }
+    
+    a {
+        color: #333 !important;
+        text-decoration: none !important;
+    }
+    
+    .contact-info a:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+} 
